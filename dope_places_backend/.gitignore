@@ -1,0 +1,37 @@
+#=============================#
+#       Generated files       #
+#=============================#
+**.pyc
+**.sqlite3
+**.swo
+**.swp
+
+
+
+#===================================#
+#       Generated directories       #
+#===================================#
+**/__pycache__/
+htmlcov/
+media/
+static/
+venv/
+
+
+
+#==========================#
+#       Hidden files       #
+#==========================#
+.coverage
+.env
+.venv
+.python-version
+
+
+
+#================================#
+#       Hidden directories       #
+#================================#
+.idea/
+.ropeproject/
+.vscode/

@@ -1,0 +1,18 @@
+coreapi
+django < 2.2
+django-cors-headers
+django-crispy-forms
+django-filter
+django-import-export
+django-model-utils
+django-rest-auth
+djangorestframework
+markdown
+mysqlclient
+pillow
+pip-tools
+pygments
+python-dotenv
+unipath
+social-auth-core
+social-auth-app-django

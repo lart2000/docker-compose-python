@@ -1,0 +1,10 @@
+[report]
+omit =
+    .idea/*
+    */migrations/*
+    config/*
+    apps/*/tests/*
+    apps/*/apps.py
+    manage.py
+
+show_missing = True

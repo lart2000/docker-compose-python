@@ -1,0 +1,10 @@
+FROM python:latest
+
+WORKDIR /usr/src/app/dope_places_backend
+
+COPY ./dope_places_backend/requirements/common.in ./
+COPY ./dope_places_backend/requirements/develop.in ./
+
+RUN  apt-get update -y && apt-get install  nmap -y && \
+    pip install --no-cache-dir -r common.in && \
+    pip install --no-cache-dir -r develop.in \
