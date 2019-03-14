@@ -12,7 +12,8 @@ services:
       # - ./project-backend:/go/src/github.com/lart2000/project-backend
       - ./dope_places_backend:/usr/src/app/dope_places_backend
     # command: [ "sh", "-c", "cd /go/src/github.com/lart2000/coreabeautyperu/project-backend buffalo dev" ] 
-    command: python manage.py runserver 0.0.0.0:8000
+    command: [ "sh", "-c", "cd /usr/src/app/dope_places_backend && python manage.py migrate && python manage.py runserver 0.0.0.0:8000" ] 
+    # command: python manage.py runserver 0.0.0.0:8000
     networks:
       backend:
         ipv4_address: 172.20.0.5
@@ -25,8 +26,8 @@ services:
       - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      - MYSQL_ROOT_PASSWORD=12345
-      - POSTGRES_PASSWORD=12345
+      # - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     networks:
       backend:
         ipv4_address: 172.20.0.6
